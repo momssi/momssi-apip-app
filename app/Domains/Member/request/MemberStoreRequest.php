@@ -2,9 +2,9 @@
 
 namespace App\Domains\Member\request;
 
-use App\Domains\DtoTrait;
-use App\Domains\Member\dto\MemberStoreDto;
 use Illuminate\Foundation\Http\FormRequest;
+use App\Domains\Member\dto\MemberStoreDto;
+use App\Domains\DtoTrait;
 
 class MemberStoreRequest extends FormRequest
 {
@@ -13,8 +13,9 @@ class MemberStoreRequest extends FormRequest
     public function rules():array
     {
         return [
+            'name' => 'required|string',
             'email' => 'required|email|max:256',
-            'password' => 'required|string|max:256'
+            'password' => 'required|string|max:256',
         ];
     }
 

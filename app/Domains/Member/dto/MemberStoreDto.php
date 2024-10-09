@@ -4,8 +4,19 @@ namespace App\Domains\Member\dto;
 
 class MemberStoreDto
 {
+    private string $name;
     private string $email;
     private string $password;
+
+    public function getName():string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name):void
+    {
+        $this->name = trim($name);
+    }
 
     public function getEmail():string
     {
@@ -14,7 +25,7 @@ class MemberStoreDto
 
     public function setEmail(string $email):void
     {
-        $this->email = $email;
+        $this->email = trim($email);
     }
 
     public function getPassword():string

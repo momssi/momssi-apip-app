@@ -1,0 +1,8 @@
+POST http://momssi-apip-app.test/api/members
+Content-Type: application/json
+
+{
+    "name": "Yeawon Kim",
+    "email": "kimyw23534@naver.com",
+    "password": "qlalfqjsh1!"
+}
