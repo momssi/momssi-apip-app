@@ -22,6 +22,19 @@ class Member extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'admin_yn',
+        'delete_yn',
+        'last_login_ip',
+        'refresh_token',
+        'login_fail_count',
+        'status',
+        'last_login_at',
+    ];
+
+    protected $dateFormat = 'U';
+
+    protected $dates = [
+        'last_login_at'
     ];
 
     /**

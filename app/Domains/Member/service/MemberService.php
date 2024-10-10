@@ -18,6 +18,7 @@ class MemberService implements MemberServiceInterface
         $member->name = $dto->getName();
         $member->email = $dto->getEmail();
         $member->password = Hash::make($dto->getPassword());
+//        $member->
 
         try {
             if ($this->memberRepository->findByEmail($member->email)) {
